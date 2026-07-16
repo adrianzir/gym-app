@@ -1,0 +1,182 @@
+[
+    {
+        "tipo_rutina": "Push",
+        "ejercicios": [
+            {
+                "nombre": "Press de banca",
+                "series": 4,
+                "repeticiones": 8
+            },
+            {
+                "nombre": "Press militar",
+                "series": 4,
+                "repeticiones": 10
+            },
+            {
+                "nombre": "Press inclinado con mancuernas",
+                "series": 3,
+                "repeticiones": 10
+            },
+            {
+                "nombre": "Elevaciones laterales",
+                "series": 3,
+                "repeticiones": 15
+            },
+            {
+                "nombre": "Extensi\u00f3n de tr\u00edceps en polea",
+                "series": 3,
+                "repeticiones": 12
+            }
+        ]
+    },
+    {
+        "tipo_rutina": "Legs",
+        "ejercicios": [
+            {
+                "nombre": "Sentadilla en Hack",
+                "series": 4,
+                "repeticiones": 8
+            },
+            {
+                "nombre": "Extensiones de cu\u00e1driceps en maquina",
+                "series": 4,
+                "repeticiones": 12
+            },
+            {
+                "nombre": "Sentadilla con talones elevados",
+                "series": 4,
+                "repeticiones": 12
+            },
+            {
+                "nombre": "Extensiones de pantorrillas unilaterales",
+                "series": 5,
+                "repeticiones": 12
+            },
+            {
+                "nombre": "Extensiones de pantorrillas Sentado",
+                "series": 4,
+                "repeticiones": 12
+            }
+        ]
+    },
+    {
+        "tipo_rutina": "Push",
+        "ejercicios": [
+            {
+                "nombre": "Aperturas en poleas o maquina",
+                "series": 4,
+                "repeticiones": 12
+            },
+            {
+                "nombre": "press de banca o en maquina ",
+                "series": 4,
+                "repeticiones": 10
+            },
+            {
+                "nombre": "press de pecho inclinado",
+                "series": 4,
+                "repeticiones": 12
+            },
+            {
+                "nombre": "combo hombros: vuelos laterales, frontales y en V",
+                "series": 3,
+                "repeticiones": 8
+            },
+            {
+                "nombre": "press militar con barra",
+                "series": 4,
+                "repeticiones": 12
+            },
+            {
+                "nombre": "Fondos",
+                "series": 3,
+                "repeticiones": 8
+            },
+            {
+                "nombre": "crunch abs en banco inclinado",
+                "series": 4,
+                "repeticiones": 8
+            },
+            {
+                "nombre": "elevaci\u00f3n de piernas para abs inferiores",
+                "series": 4,
+                "repeticiones": 6
+            }
+        ]
+    },
+    {
+        "tipo_rutina": "Pull",
+        "ejercicios": [
+            {
+                "nombre": "Jal\u00f3n al pecho",
+                "series": 4,
+                "repeticiones": 12
+            },
+            {
+                "nombre": "extensi\u00f3n de lats en polea",
+                "series": 4,
+                "repeticiones": 12
+            },
+            {
+                "nombre": "dominadas asistidas",
+                "series": 4,
+                "repeticiones": 12
+            },
+            {
+                "nombre": "remo con barra de pie",
+                "series": 4,
+                "repeticiones": 8
+            },
+            {
+                "nombre": "aperturas para hombros posteriores",
+                "series": 4,
+                "repeticiones": 10
+            },
+            {
+                "nombre": "curl de biceps",
+                "series": 4,
+                "repeticiones": 8
+            },
+            {
+                "nombre": "curl martillo",
+                "series": 3,
+                "repeticiones": 6
+            },
+            {
+                "nombre": "curl de biceps con barra",
+                "series": 4,
+                "repeticiones": 8
+            }
+        ]
+    },
+    {
+        "tipo_rutina": "Legs",
+        "ejercicios": [
+            {
+                "nombre": "Sentadilla en Hack",
+                "series": 4,
+                "repeticiones": 8
+            },
+            {
+                "nombre": "Extensiones de cu\u00e1driceps en maquina",
+                "series": 4,
+                "repeticiones": 12
+            },
+            {
+                "nombre": "Sentadilla con talones elevados",
+                "series": 4,
+                "repeticiones": 12
+            },
+            {
+                "nombre": "Extensiones de pantorrillas unilaterales",
+                "series": 5,
+                "repeticiones": 12
+            },
+            {
+                "nombre": "Extensiones de pantorrillas Sentado",
+                "series": 4,
+                "repeticiones": 12
+            }
+        ]
+    }
+]

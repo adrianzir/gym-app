@@ -1,0 +1,389 @@
+/*=============================
+        PALETA DE COLORES
+=============================*/
+
+:root {
+    --naranja: #ff6b00;
+    --amarillo: #ffd000;
+    --negro: #121212;
+    --gris: #1d1d1d;
+    --gris2: #2d2d2d;
+    --blanco: #ffffff;
+}
+
+/*=============================
+        ESTILOS GENERALES
+=============================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #000, #111, #1a1a1a);
+    color: var(--blanco);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/*=============================
+        CONTENEDOR
+=============================*/
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 15px;
+}
+
+.form-container {
+
+    background: var(--gris);
+    padding: 40px;
+    width: 350px;
+    border-radius: 15px;
+    border: 2px solid var(--naranja);
+    box-shadow:
+        0 0 15px rgba(255, 107, 0, .4),
+        0 0 35px rgba(255, 208, 0, .15);
+
+}
+.nav-rutinas {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.sub-container {
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    
+}
+.container-btns-rutinas {
+    margin: 10px 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/*=============================
+            TITULOS
+=============================*/
+
+h1 {
+
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 60px;
+
+    text-align: center;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 30px;
+
+    color: var(--amarillo);
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 0 10px var(--naranja),
+        0 0 20px var(--naranja),
+        0 0 40px var(--naranja);
+
+}
+
+h2 {
+
+    font-family: 'Bebas Neue', sans-serif;
+
+    color: var(--naranja);
+
+    margin-bottom: 15px;
+
+    letter-spacing: 2px;
+
+}
+
+p {
+    color: #cfcfcf;
+    margin-bottom: 20px;
+}
+
+/*=============================
+        FORMULARIO
+=============================*/
+
+form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+/*=============================
+        LABELS
+=============================*/
+
+label {
+
+    color: var(--amarillo);
+
+    font-weight: 600;
+
+}
+
+/*=============================
+        INPUTS
+=============================*/
+
+input,
+select,
+textarea {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin: 10px 0;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: var(--gris2);
+
+    color: white;
+
+    font-size: 15px;
+
+    transition: .3s;
+
+}
+
+input::placeholder,
+textarea::placeholder {
+
+    color: #aaaaaa;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+
+    outline: none;
+
+    box-shadow:
+        0 0 10px var(--naranja);
+
+    border: 2px solid var(--naranja);
+
+}
+
+/*=============================
+        BOTONES
+=============================*/
+
+.button {
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: linear-gradient(90deg, var(--naranja), var(--amarillo));
+
+    color: black;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .35s;
+
+}
+
+.button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 15px var(--naranja),
+        0 0 30px var(--amarillo);
+
+}
+
+.button:active {
+
+    transform: scale(.96);
+
+}
+.return-button {
+    height: fit-content;
+    text-align: center;
+}
+
+/*=============================
+        FLEXBOX
+=============================*/
+
+.row {
+
+    display: flex;
+
+    gap: 15px;
+
+}
+
+.col {
+
+    flex: 1;
+
+}
+
+/*=============================
+        TARJETAS
+=============================*/
+
+.card {
+
+    background: var(--gris);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    transition: .35s;
+    width: 350px;
+    display:flex;
+
+}
+
+.card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 0 15px var(--naranja),
+        0 0 35px rgba(255, 208, 0, .3);
+
+}
+
+/*=============================
+        EFECTO GLOW
+=============================*/
+
+.glow {
+
+    box-shadow:
+        0 0 10px var(--naranja),
+        0 0 20px var(--naranja),
+        0 0 40px var(--amarillo);
+
+}
+
+/*=============================
+        HEADER
+=============================*/
+
+header {
+
+    width: 100%;
+
+    padding: 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-bottom: 3px solid var(--naranja);
+
+}
+
+/*=============================
+        TABLAS
+=============================*/
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 20px;
+
+}
+
+th {
+
+    background: var(--naranja);
+
+    color: black;
+
+    padding: 12px;
+
+}
+
+td {
+
+    background: #242424;
+
+    padding: 12px;
+
+    border-bottom: 1px solid #333;
+
+}
+
+tr:hover {
+
+    background: #2f2f2f;
+
+}
+
+/*=============================
+        RESPONSIVE
+=============================*/
+
+@media(max-width:768px) {
+
+    .row {
+        flex-direction: column;
+    }
+
+    .form-container {
+        margin: 20px;
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+}

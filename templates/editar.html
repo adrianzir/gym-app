@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+    <title>Editar Rutina</title>
+</head>
+<body>
+    <h1>Editando rutina de: {{ tipo_rutina }}</h1>
+
+    <form class="form-container" action="/editar/{{ tipo_rutina }}" method="POST">
+        <label>Tipo de rutina</label>
+        <select name="nuevo_tipo_rutina" required>
+            <option value="Push" {% if tipo_rutina == "Push" %}selected{% endif %}>Push</option>
+            <option value="Pull" {% if tipo_rutina == "Pull" %}selected{% endif %}>Pull</option>
+            <option value="Legs" {% if tipo_rutina == "Legs" %}selected{% endif %}>Legs</option>
+        </select>
+        <div id="contenedor-ejercicios">
+            {% for ejercicio in ejercicios %}
+                <div class="fila-ejercicio">
+                    <input type="text" name="nombre_ejercicio" value="{{ ejercicio.nombre }}" required>
+                    <input type="number" name="series_ejercicio" value="{{ ejercicio.series }}" required>
+                    <input type="number" name="repes_ejercicio" value="{{ ejercicio.repeticiones }}" required>
+                    <button type="button" onclick="this.parentElement.remove()">Quitar</button>
+                </div>
+            {% endfor %}
+        </div>
+
+        <button class="button" type="button" onclick="agregarFila()">+ Agregar ejercicio</button>
+        <br><br>
+        <button class="button" type="submit">Guardar cambios</button>
+    </form>
+
+    <script>
+        function agregarFila() {
+            const contenedor = document.getElementById("contenedor-ejercicios");
+            const nuevaFila = document.createElement("div");
+            nuevaFila.className = "fila-ejercicio";
+            nuevaFila.innerHTML = `
+                <input type="text" name="nombre_ejercicio" placeholder="Nombre del ejercicio" required>
+                <input type="number" name="series_ejercicio" placeholder="Series" required>
+                <input type="number" name="repes_ejercicio" placeholder="Repeticiones" required>
+                <button type="button" onclick="this.parentElement.remove()">Quitar</button>
+            `;
+            contenedor.appendChild(nuevaFila);
+        }
+    </script>
+</body>
+</html>

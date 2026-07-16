@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+    <title>GYM APP</title>
+</head>
+<body>
+    <h1>Bienvenido a la app de rutinas de ejercicio</h1>
+    <p>Organiza y consulta tus rutinas de gimnasio fácilmente.</p>
+
+    <nav>
+        <a href="/rutinas" class="button">Ver mis rutinas</a><span> | </span>
+        <a href="/agregar" class="button">Agregar nueva rutina</a>
+    </nav>
+</body>
+</html>

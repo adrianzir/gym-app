@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+    <title>Agregar Rutina</title>
+</head>
+<body>
+    <h1>Agregar nueva rutina</h1>
+
+    <form class="form-container" action="/agregar" method="POST">
+        <label>Tipo de rutina</label>
+        <select name="tipo_rutina" required>
+            <option value="Push">Push</option>
+            <option value="Pull">Pull</option>
+            <option value="Legs">Legs</option>
+        </select>
+
+        <div id="contenedor-ejercicios">
+            <div class="fila-ejercicio">
+                <input type="text" name="nombre_ejercicio" placeholder="Nombre del ejercicio" required>
+                <input type="number" name="series_ejercicio" placeholder="Series" required>
+                <input type="number" name="repes_ejercicio" placeholder="Repeticiones" required>
+            </div>
+        </div>
+
+        <button class="button" type="button" onclick="agregarFila()">+ Agregar ejercicio</button>
+        
+        <button class="button" type="submit">Guardar rutina</button>
+
+        <a href="/inicio" class="return-button button">Cancelar</a>
+    </form>
+
+    <script>
+        function agregarFila() {
+            const contenedor = document.getElementById("contenedor-ejercicios");
+            const nuevaFila = document.createElement("div");
+            nuevaFila.className = "fila-ejercicio";
+            nuevaFila.innerHTML = `
+                <input type="text" name="nombre_ejercicio" placeholder="Nombre del ejercicio" required>
+                <input type="number" name="series_ejercicio" placeholder="Series" required>
+                <input type="number" name="repes_ejercicio" placeholder="Repeticiones" required>
+            `;
+            contenedor.appendChild(nuevaFila);
+        }
+    </script>
+</body>
+</html>

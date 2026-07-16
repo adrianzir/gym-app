@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+    <title>Mis Rutinas de Gimnasio</title>
+</head>
+<body>
+        <div class="nav-rutinas">
+            <h1>Rutinas de Gimnasio</h1>
+            <a href="/inicio" class="return-button button">Volver al inicio</a>
+        </div>
+    
+    <div class="container">
+    {% for rutina in rutinas %}
+    
+        <div class="card">
+            <div class="container">
+                <h2>{{ rutina.tipo_rutina }}</h2>
+                <ul>
+                    {% for ejercicio in rutina.ejercicios %}
+                        <li >{{ ejercicio.nombre }}: {{ ejercicio.series }}x{{ ejercicio.repeticiones }}       </li>
+                    {% endfor %}
+                </ul>
+                <div class="container-btns-rutinas">
+                    <a href="/editar/{{ rutina.tipo_rutina }}" class="button">Editar</a>
+                    <form action="/eliminar/{{ rutina.tipo_rutina }}" method="POST">
+                        <button class="button" type="submit">Eliminar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</body>
+</html>
