@@ -1,35 +1,5 @@
 [
     {
-        "tipo_rutina": "Push",
-        "ejercicios": [
-            {
-                "nombre": "Press de banca",
-                "series": 4,
-                "repeticiones": 8
-            },
-            {
-                "nombre": "Press militar",
-                "series": 4,
-                "repeticiones": 10
-            },
-            {
-                "nombre": "Press inclinado con mancuernas",
-                "series": 3,
-                "repeticiones": 10
-            },
-            {
-                "nombre": "Elevaciones laterales",
-                "series": 3,
-                "repeticiones": 15
-            },
-            {
-                "nombre": "Extensi\u00f3n de tr\u00edceps en polea",
-                "series": 3,
-                "repeticiones": 12
-            }
-        ]
-    },
-    {
         "tipo_rutina": "Legs",
         "ejercicios": [
             {
@@ -56,51 +26,6 @@
                 "nombre": "Extensiones de pantorrillas Sentado",
                 "series": 4,
                 "repeticiones": 12
-            }
-        ]
-    },
-    {
-        "tipo_rutina": "Push",
-        "ejercicios": [
-            {
-                "nombre": "Aperturas en poleas o maquina",
-                "series": 4,
-                "repeticiones": 12
-            },
-            {
-                "nombre": "press de banca o en maquina ",
-                "series": 4,
-                "repeticiones": 10
-            },
-            {
-                "nombre": "press de pecho inclinado",
-                "series": 4,
-                "repeticiones": 12
-            },
-            {
-                "nombre": "combo hombros: vuelos laterales, frontales y en V",
-                "series": 3,
-                "repeticiones": 8
-            },
-            {
-                "nombre": "press militar con barra",
-                "series": 4,
-                "repeticiones": 12
-            },
-            {
-                "nombre": "Fondos",
-                "series": 3,
-                "repeticiones": 8
-            },
-            {
-                "nombre": "crunch abs en banco inclinado",
-                "series": 4,
-                "repeticiones": 8
-            },
-            {
-                "nombre": "elevaci\u00f3n de piernas para abs inferiores",
-                "series": 4,
-                "repeticiones": 6
             }
         ]
     },

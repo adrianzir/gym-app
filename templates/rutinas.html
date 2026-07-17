@@ -25,8 +25,8 @@
                     {% endfor %}
                 </ul>
                 <div class="container-btns-rutinas">
-                    <a href="/editar/{{ rutina.tipo_rutina }}" class="button">Editar</a>
-                    <form action="/eliminar/{{ rutina.tipo_rutina }}" method="POST">
+                    <a href="/editar/{{ loop.index0 }}" class="button">Editar</a>
+                    <form action="/eliminar/{{ loop.index0 }}" method="POST">
                         <button class="button" type="submit">Eliminar</button>
                     </form>
                 </div>

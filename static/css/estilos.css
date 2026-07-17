@@ -85,6 +85,19 @@ a {
     justify-content: center;
     gap: 20px;
 }
+.nav-inicio {
+        display: flex;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+}
+.fila-ejercicio {
+    border-radius: 20px;
+    border: 1px solid rgba(83, 83, 83, 0.833);
+    padding: 10px;
+    margin: 10px 0;
+}
 
 /*=============================
             TITULOS

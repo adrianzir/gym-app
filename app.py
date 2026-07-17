@@ -19,18 +19,12 @@ def agregar_rutina(rutinas, tipo_rutina, ejercicios):
     nueva_rutina = {"tipo_rutina": tipo_rutina, "ejercicios": ejercicios}
     rutinas.append(nueva_rutina)
 
-def eliminar_rutina(rutinas, tipo_rutina):
-    for rutina in rutinas:
-        if rutina["tipo_rutina"] == tipo_rutina:
-            rutinas.remove(rutina)
-            break
+def eliminar_rutina(rutinas, indice):
+    rutinas.pop(indice)
 
-def actualizar_ejercicios_rutina(rutinas, tipo_rutina, nuevo_tipo_rutina, nuevos_ejercicios):
-    for rutina in rutinas:
-        if rutina["tipo_rutina"] == tipo_rutina:
-            rutina["tipo_rutina"] = nuevo_tipo_rutina
-            rutina["ejercicios"] = nuevos_ejercicios
-            break
+def actualizar_ejercicios_rutina(rutinas, indice, nuevo_tipo_rutina, nuevos_ejercicios):
+    rutinas[indice]["tipo_rutina"] = nuevo_tipo_rutina
+    rutinas[indice]["ejercicios"] = nuevos_ejercicios
 
 # 2. Luego, todas las rutas (@app.route), una sola vez cada una
 @app.route("/")
@@ -69,15 +63,15 @@ def agregar():
 
     return render_template("agregar.html")
 
-@app.route("/eliminar/<tipo_rutina>", methods=["POST"])
-def eliminar(tipo_rutina):
+@app.route("/eliminar/<int:indice>", methods=["POST"])
+def eliminar(indice):
     rutinas = cargar_rutinas()
-    eliminar_rutina(rutinas, tipo_rutina)
+    eliminar_rutina(rutinas, indice)
     guardar_rutinas(rutinas)
     return redirect("/rutinas")
 
-@app.route("/editar/<tipo_rutina>", methods=["GET", "POST"])
-def editar(tipo_rutina):
+@app.route("/editar/<int:indice>", methods=["GET", "POST"])
+def editar(indice):
     rutinas = cargar_rutinas()
 
     if request.method == "POST":
@@ -94,18 +88,13 @@ def editar(tipo_rutina):
                 "repeticiones": int(repeticiones[i])
             })
 
-        actualizar_ejercicios_rutina(rutinas, tipo_rutina, nuevo_tipo_rutina, nuevos_ejercicios)
+        actualizar_ejercicios_rutina(rutinas, indice, nuevo_tipo_rutina, nuevos_ejercicios)
         guardar_rutinas(rutinas)
 
         return redirect("/rutinas")
 
-    # GET: buscar la rutina actual para pre-llenar el formulario
-    rutina_actual = None
-    for rutina in rutinas:
-        if rutina["tipo_rutina"] == tipo_rutina:
-            rutina_actual = rutina
-
-    return render_template("editar.html", tipo_rutina=tipo_rutina, ejercicios=rutina_actual["ejercicios"])
+    rutina_actual = rutinas[indice]
+    return render_template("editar.html", indice=indice, tipo_rutina=rutina_actual["tipo_rutina"], ejercicios=rutina_actual["ejercicios"])
 
 # 3. Al final, el arranque del servidor
 if __name__ == "__main__":
